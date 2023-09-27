@@ -1,10 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "posts",
+  "collectionName": "posts_radars",
   "info": {
-    "singularName": "post",
-    "pluralName": "posts",
-    "displayName": "posts"
+    "singularName": "posts-radar",
+    "pluralName": "posts-radars",
+    "displayName": "posts_radar",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,21 +15,25 @@
     "title": {
       "type": "string"
     },
-    "content": {
-      "type": "richtext"
-    },
     "link": {
       "type": "string"
     },
+    "content": {
+      "type": "richtext"
+    },
     "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "isTop": {
+      "type": "boolean"
     }
   }
 }
