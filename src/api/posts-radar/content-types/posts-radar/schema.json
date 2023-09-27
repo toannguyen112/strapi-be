@@ -32,8 +32,17 @@
         "audios"
       ]
     },
-    "isTop": {
-      "type": "boolean"
+    "isLastNew": {
+      "type": "boolean",
+      "default": true
+    },
+    "isConnectingDot": {
+      "type": "boolean",
+      "default": true
+    },
+    "isPower": {
+      "type": "boolean",
+      "default": true
     }
   }
 }

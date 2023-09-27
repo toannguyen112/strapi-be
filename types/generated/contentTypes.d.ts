@@ -769,7 +769,9 @@ export interface ApiPostsRadarPostsRadar extends Schema.CollectionType {
     link: Attribute.String;
     content: Attribute.RichText;
     thumbnail: Attribute.Media;
-    isTop: Attribute.Boolean;
+    isLastNew: Attribute.Boolean & Attribute.DefaultTo<true>;
+    isConnectingDot: Attribute.Boolean & Attribute.DefaultTo<true>;
+    isPower: Attribute.Boolean & Attribute.DefaultTo<true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
