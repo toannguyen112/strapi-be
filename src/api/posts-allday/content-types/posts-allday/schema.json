@@ -37,6 +37,9 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "posts_alldays"
+    },
+    "icon": {
+      "type": "text"
     }
   }
 }

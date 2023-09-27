@@ -43,6 +43,9 @@
     "isPower": {
       "type": "boolean",
       "default": true
+    },
+    "icon": {
+      "type": "text"
     }
   }
 }

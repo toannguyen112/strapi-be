@@ -735,6 +735,7 @@ export interface ApiPostsAlldayPostsAllday extends Schema.CollectionType {
       'manyToOne',
       'api::category.category'
     >;
+    icon: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -772,6 +773,7 @@ export interface ApiPostsRadarPostsRadar extends Schema.CollectionType {
     isLastNew: Attribute.Boolean & Attribute.DefaultTo<true>;
     isConnectingDot: Attribute.Boolean & Attribute.DefaultTo<true>;
     isPower: Attribute.Boolean & Attribute.DefaultTo<true>;
+    icon: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
