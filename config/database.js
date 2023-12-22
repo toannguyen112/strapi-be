@@ -18,6 +18,7 @@ module.exports = ({ env }) => {
         database,
         user,
         password,
+        ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : { rejectUnauthorized: true } 
       },
       debug: false,
     }
