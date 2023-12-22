@@ -18,13 +18,8 @@ module.exports = ({ env }) => {
         database,
         user,
         password,
-        schema:'public',
-        ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
       },
       debug: false,
-    },
-    settings: {
-      forceMigration: false
     }
   }
 };
