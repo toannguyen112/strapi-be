@@ -11,16 +11,23 @@ module.exports = ({ env }) => {
 
   return {
     connection: {
-      client: 'postgres',
+      client: "postgres",
       connection: {
         host,
         port,
         database,
         user,
         password,
-        ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: true } : { rejectUnauthorized: false } 
+        schema: "public",
+        ssl:
+          process.env.NODE_ENV === "production"
+            ? { rejectUnauthorized: false }
+            : { rejectUnauthorized: false },
       },
       debug: false,
-    }
-  }
+    },
+    settings: {
+      forceMigration: false,
+    },
+  };
 };
