@@ -22,12 +22,9 @@ module.exports = ({ env }) => {
         ssl:
           process.env.NODE_ENV === "production"
             ? { rejectUnauthorized: false }
-            : { rejectUnauthorized: false },
+            : false,
       },
       debug: false,
-    },
-    settings: {
-      forceMigration: false,
-    },
+    }
   };
 };
