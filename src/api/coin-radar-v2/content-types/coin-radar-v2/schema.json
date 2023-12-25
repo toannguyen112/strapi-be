@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coin_radar_v2s",
+  "info": {
+    "singularName": "coin-radar-v2",
+    "pluralName": "coin-radar-v2s",
+    "displayName": "coin radar v2"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "discord_link": {
+      "type": "string"
+    },
+    "x_link": {
+      "type": "string"
+    },
+    "telegram_link": {
+      "type": "string"
+    }
+  }
+}

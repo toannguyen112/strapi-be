@@ -714,6 +714,74 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
 }
 
+export interface ApiCoinAlldayCoinAllday extends Schema.CollectionType {
+  collectionName: 'coin_alldays';
+  info: {
+    singularName: 'coin-allday';
+    pluralName: 'coin-alldays';
+    displayName: 'coin allday';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    thumbnail: Attribute.Media;
+    discord_link: Attribute.String;
+    telegram_link: Attribute.String;
+    x_link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::coin-allday.coin-allday',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::coin-allday.coin-allday',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCoinRadarV2CoinRadarV2 extends Schema.CollectionType {
+  collectionName: 'coin_radar_v2s';
+  info: {
+    singularName: 'coin-radar-v2';
+    pluralName: 'coin-radar-v2s';
+    displayName: 'coin radar v2';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    thumbnail: Attribute.Media;
+    discord_link: Attribute.String;
+    x_link: Attribute.String;
+    telegram_link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::coin-radar-v2.coin-radar-v2',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::coin-radar-v2.coin-radar-v2',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPostsAlldayPostsAllday extends Schema.CollectionType {
   collectionName: 'posts_alldays';
   info: {
@@ -847,6 +915,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::category.category': ApiCategoryCategory;
+      'api::coin-allday.coin-allday': ApiCoinAlldayCoinAllday;
+      'api::coin-radar-v2.coin-radar-v2': ApiCoinRadarV2CoinRadarV2;
       'api::posts-allday.posts-allday': ApiPostsAlldayPostsAllday;
       'api::posts-radar.posts-radar': ApiPostsRadarPostsRadar;
       'api::posts-radar-v2.posts-radar-v2': ApiPostsRadarV2PostsRadarV2;
