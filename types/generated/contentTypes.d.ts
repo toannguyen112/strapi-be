@@ -682,7 +682,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   info: {
     singularName: 'category';
     pluralName: 'categories';
-    displayName: 'category_alldays';
+    displayName: 'Danh m\u1EE5c b\u00E0i vi\u1EBFt allday';
     description: '';
   };
   options: {
@@ -782,12 +782,45 @@ export interface ApiCoinRadarV2CoinRadarV2 extends Schema.CollectionType {
   };
 }
 
+export interface ApiConfigConfig extends Schema.SingleType {
+  collectionName: 'configs';
+  info: {
+    singularName: 'config';
+    pluralName: 'configs';
+    displayName: 'Config';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    discord_link: Attribute.String;
+    x_link: Attribute.String;
+    telegram_link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::config.config',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::config.config',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPostsAlldayPostsAllday extends Schema.CollectionType {
   collectionName: 'posts_alldays';
   info: {
     singularName: 'posts-allday';
     pluralName: 'posts-alldays';
-    displayName: 'posts_allday';
+    displayName: 'B\u00E0i vi\u1EBFt allday';
     description: '';
   };
   options: {
@@ -866,7 +899,7 @@ export interface ApiPostsRadarV2PostsRadarV2 extends Schema.CollectionType {
   info: {
     singularName: 'posts-radar-v2';
     pluralName: 'posts-radar-v2s';
-    displayName: 'Posts_radar_v2';
+    displayName: 'B\u00E0i vi\u1EBFt radar v2';
     description: '';
   };
   options: {
@@ -880,6 +913,7 @@ export interface ApiPostsRadarV2PostsRadarV2 extends Schema.CollectionType {
     date: Attribute.String;
     link: Attribute.String;
     thumbnail: Attribute.Media;
+    isFeatured: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -917,6 +951,7 @@ declare module '@strapi/types' {
       'api::category.category': ApiCategoryCategory;
       'api::coin-allday.coin-allday': ApiCoinAlldayCoinAllday;
       'api::coin-radar-v2.coin-radar-v2': ApiCoinRadarV2CoinRadarV2;
+      'api::config.config': ApiConfigConfig;
       'api::posts-allday.posts-allday': ApiPostsAlldayPostsAllday;
       'api::posts-radar.posts-radar': ApiPostsRadarPostsRadar;
       'api::posts-radar-v2.posts-radar-v2': ApiPostsRadarV2PostsRadarV2;

@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "configs",
+  "info": {
+    "singularName": "config",
+    "pluralName": "configs",
+    "displayName": "Config",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "discord_link": {
+      "type": "string"
+    },
+    "x_link": {
+      "type": "string"
+    },
+    "telegram_link": {
+      "type": "string"
+    }
+  }
+}

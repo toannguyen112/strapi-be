@@ -4,7 +4,7 @@
   "info": {
     "singularName": "posts-radar-v2",
     "pluralName": "posts-radar-v2s",
-    "displayName": "Posts_radar_v2",
+    "displayName": "Bài viết radar v2",
     "description": ""
   },
   "options": {
@@ -35,14 +35,19 @@
       "type": "string"
     },
     "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
