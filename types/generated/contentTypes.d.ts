@@ -914,6 +914,7 @@ export interface ApiPostsRadarV2PostsRadarV2 extends Schema.CollectionType {
     link: Attribute.String;
     thumbnail: Attribute.Media;
     isFeatured: Attribute.Boolean & Attribute.DefaultTo<false>;
+    description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
