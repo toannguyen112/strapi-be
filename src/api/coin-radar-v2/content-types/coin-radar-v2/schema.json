@@ -4,7 +4,8 @@
   "info": {
     "singularName": "coin-radar-v2",
     "pluralName": "coin-radar-v2s",
-    "displayName": "coin radar v2"
+    "displayName": "coin radar v2",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,14 +17,15 @@
       "required": true
     },
     "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "discord_link": {
       "type": "string"
@@ -33,6 +35,9 @@
     },
     "telegram_link": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

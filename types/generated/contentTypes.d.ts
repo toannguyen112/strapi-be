@@ -720,6 +720,7 @@ export interface ApiCoinAlldayCoinAllday extends Schema.CollectionType {
     singularName: 'coin-allday';
     pluralName: 'coin-alldays';
     displayName: 'coin allday';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -730,6 +731,7 @@ export interface ApiCoinAlldayCoinAllday extends Schema.CollectionType {
     discord_link: Attribute.String;
     telegram_link: Attribute.String;
     x_link: Attribute.String;
+    description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -754,6 +756,7 @@ export interface ApiCoinRadarV2CoinRadarV2 extends Schema.CollectionType {
     singularName: 'coin-radar-v2';
     pluralName: 'coin-radar-v2s';
     displayName: 'coin radar v2';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -764,6 +767,7 @@ export interface ApiCoinRadarV2CoinRadarV2 extends Schema.CollectionType {
     discord_link: Attribute.String;
     x_link: Attribute.String;
     telegram_link: Attribute.String;
+    description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
