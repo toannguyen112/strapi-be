@@ -40,7 +40,7 @@
       "type": "text"
     },
     "icon": {
-      "type": "string"
+      "type": "text"
     },
     "child": {
       "type": "component",
