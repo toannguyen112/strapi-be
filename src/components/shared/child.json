@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_children",
+  "info": {
+    "displayName": "child",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "link": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

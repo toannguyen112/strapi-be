@@ -38,6 +38,14 @@
     },
     "description": {
       "type": "text"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "child": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.child"
     }
   }
 }
