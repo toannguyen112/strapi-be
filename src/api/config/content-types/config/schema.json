@@ -20,6 +20,15 @@
     },
     "telegram_link": {
       "type": "string"
+    },
+    "video_homepage": {
+      "type": "text"
+    },
+    "video_about": {
+      "type": "text"
+    },
+    "video_notable": {
+      "type": "text"
     }
   }
 }

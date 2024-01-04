@@ -803,6 +803,9 @@ export interface ApiConfigConfig extends Schema.SingleType {
     discord_link: Attribute.String;
     x_link: Attribute.String;
     telegram_link: Attribute.String;
+    video_homepage: Attribute.Text;
+    video_about: Attribute.Text;
+    video_notable: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
