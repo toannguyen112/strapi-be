@@ -769,7 +769,7 @@ export interface ApiCoinRadarV2CoinRadarV2 extends Schema.CollectionType {
     telegram_link: Attribute.String;
     description: Attribute.Text;
     icon: Attribute.Text;
-    child: Attribute.Component<'shared.child', true>;
+    parent: Attribute.Component<'shared.child', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

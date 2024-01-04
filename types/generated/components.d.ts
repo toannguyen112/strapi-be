@@ -3,14 +3,12 @@ import type { Schema, Attribute } from '@strapi/strapi';
 export interface SharedChild extends Schema.Component {
   collectionName: 'components_shared_children';
   info: {
-    displayName: 'child';
+    displayName: 'parent';
     description: '';
   };
   attributes: {
     title: Attribute.String;
-    images: Attribute.Media;
-    link: Attribute.String;
-    description: Attribute.Text;
+    child: Attribute.Component<'shared.parent-child', true>;
   };
 }
 
@@ -33,6 +31,19 @@ export interface SharedMetaSocial extends Schema.Component {
       Attribute.SetMinMaxLength<{
         maxLength: 65;
       }>;
+    image: Attribute.Media;
+  };
+}
+
+export interface SharedParentChild extends Schema.Component {
+  collectionName: 'components_shared_parent_children';
+  info: {
+    displayName: 'parent-child';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.Text;
+    link: Attribute.String;
     image: Attribute.Media;
   };
 }
@@ -70,6 +81,7 @@ declare module '@strapi/types' {
     export interface Components {
       'shared.child': SharedChild;
       'shared.meta-social': SharedMetaSocial;
+      'shared.parent-child': SharedParentChild;
       'shared.seo': SharedSeo;
     }
   }

@@ -1,7 +1,7 @@
 {
   "collectionName": "components_shared_children",
   "info": {
-    "displayName": "child",
+    "displayName": "parent",
     "description": ""
   },
   "options": {},
@@ -9,22 +9,11 @@
     "title": {
       "type": "string"
     },
-    "images": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "link": {
-      "type": "string"
-    },
-    "description": {
-      "type": "text"
+    "child": {
+      "displayName": "parent-child",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.parent-child"
     }
   }
 }

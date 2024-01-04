@@ -42,7 +42,7 @@
     "icon": {
       "type": "text"
     },
-    "child": {
+    "parent": {
       "type": "component",
       "repeatable": true,
       "component": "shared.child"
