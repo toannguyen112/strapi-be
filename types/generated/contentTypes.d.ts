@@ -714,80 +714,6 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
 }
 
-export interface ApiCoinAlldayCoinAllday extends Schema.CollectionType {
-  collectionName: 'coin_alldays';
-  info: {
-    singularName: 'coin-allday';
-    pluralName: 'coin-alldays';
-    displayName: 'coin allday';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    thumbnail: Attribute.Media;
-    discord_link: Attribute.String;
-    telegram_link: Attribute.String;
-    x_link: Attribute.String;
-    description: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::coin-allday.coin-allday',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::coin-allday.coin-allday',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiCoinRadarV2CoinRadarV2 extends Schema.CollectionType {
-  collectionName: 'coin_radar_v2s';
-  info: {
-    singularName: 'coin-radar-v2';
-    pluralName: 'coin-radar-v2s';
-    displayName: 'coin radar v2';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    thumbnail: Attribute.Media;
-    discord_link: Attribute.String;
-    x_link: Attribute.String;
-    telegram_link: Attribute.String;
-    description: Attribute.Text;
-    icon: Attribute.Text;
-    parent: Attribute.Component<'shared.child', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::coin-radar-v2.coin-radar-v2',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::coin-radar-v2.coin-radar-v2',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiConfigConfig extends Schema.SingleType {
   collectionName: 'configs';
   info: {
@@ -865,37 +791,32 @@ export interface ApiPostsAlldayPostsAllday extends Schema.CollectionType {
   };
 }
 
-export interface ApiPostsRadarPostsRadar extends Schema.CollectionType {
-  collectionName: 'posts_radars';
+export interface ApiWcmCaseStudiesWcmCaseStudies extends Schema.CollectionType {
+  collectionName: 'wcm_case_studie';
   info: {
-    singularName: 'posts-radar';
-    pluralName: 'posts-radars';
-    displayName: 'posts_radar';
-    description: '';
+    singularName: 'wcm-case-studies';
+    pluralName: 'wcm-case-studie';
+    displayName: 'wcm_case_studies';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
-    link: Attribute.String;
-    content: Attribute.RichText;
+    name: Attribute.String;
     thumbnail: Attribute.Media;
-    isLastNew: Attribute.Boolean & Attribute.DefaultTo<true>;
-    isConnectingDot: Attribute.Boolean & Attribute.DefaultTo<true>;
-    isPower: Attribute.Boolean & Attribute.DefaultTo<true>;
-    icon: Attribute.Text;
+    link: Attribute.String;
+    slug: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::posts-radar.posts-radar',
+      'api::wcm-case-studies.wcm-case-studies',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::posts-radar.posts-radar',
+      'api::wcm-case-studies.wcm-case-studies',
       'oneToOne',
       'admin::user'
     > &
@@ -903,38 +824,64 @@ export interface ApiPostsRadarPostsRadar extends Schema.CollectionType {
   };
 }
 
-export interface ApiPostsRadarV2PostsRadarV2 extends Schema.CollectionType {
-  collectionName: 'posts_radar_v2s';
+export interface ApiWcmInfluencersWcmInfluencers extends Schema.CollectionType {
+  collectionName: 'wcm_influencer';
   info: {
-    singularName: 'posts-radar-v2';
-    pluralName: 'posts-radar-v2s';
-    displayName: 'B\u00E0i vi\u1EBFt radar v2';
-    description: '';
+    singularName: 'wcm-influencers';
+    pluralName: 'wcm-influencer';
+    displayName: 'wcm_influencer';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
-    isMission: Attribute.Boolean & Attribute.DefaultTo<true>;
-    isNew: Attribute.Boolean & Attribute.DefaultTo<true>;
-    isNoTablePost: Attribute.Boolean & Attribute.DefaultTo<true>;
-    date: Attribute.String;
+    name: Attribute.String;
     link: Attribute.String;
     thumbnail: Attribute.Media;
-    isFeatured: Attribute.Boolean & Attribute.DefaultTo<false>;
-    description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::posts-radar-v2.posts-radar-v2',
+      'api::wcm-influencers.wcm-influencers',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::posts-radar-v2.posts-radar-v2',
+      'api::wcm-influencers.wcm-influencers',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiWcmServiceWcmService extends Schema.CollectionType {
+  collectionName: 'wcm_services';
+  info: {
+    singularName: 'wcm-service';
+    pluralName: 'wcm-services';
+    displayName: 'wcm_services';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Unique;
+    thumbnail: Attribute.Media;
+    link: Attribute.String;
+    slug: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::wcm-service.wcm-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::wcm-service.wcm-service',
       'oneToOne',
       'admin::user'
     > &
@@ -959,12 +906,11 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::category.category': ApiCategoryCategory;
-      'api::coin-allday.coin-allday': ApiCoinAlldayCoinAllday;
-      'api::coin-radar-v2.coin-radar-v2': ApiCoinRadarV2CoinRadarV2;
       'api::config.config': ApiConfigConfig;
       'api::posts-allday.posts-allday': ApiPostsAlldayPostsAllday;
-      'api::posts-radar.posts-radar': ApiPostsRadarPostsRadar;
-      'api::posts-radar-v2.posts-radar-v2': ApiPostsRadarV2PostsRadarV2;
+      'api::wcm-case-studies.wcm-case-studies': ApiWcmCaseStudiesWcmCaseStudies;
+      'api::wcm-influencers.wcm-influencers': ApiWcmInfluencersWcmInfluencers;
+      'api::wcm-service.wcm-service': ApiWcmServiceWcmService;
     }
   }
 }
