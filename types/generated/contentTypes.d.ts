@@ -741,43 +741,6 @@ export interface ApiAlldayPartnerAlldayPartner extends Schema.CollectionType {
   };
 }
 
-export interface ApiCategoryCategory extends Schema.CollectionType {
-  collectionName: 'categories';
-  info: {
-    singularName: 'category';
-    pluralName: 'categories';
-    displayName: 'Danh m\u1EE5c b\u00E0i vi\u1EBFt allday';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    icon: Attribute.Text;
-    posts_alldays: Attribute.Relation<
-      'api::category.category',
-      'oneToMany',
-      'api::posts-allday.posts-allday'
-    >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::category.category',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::category.category',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiCollectionCollection extends Schema.CollectionType {
   collectionName: 'collections';
   info: {
@@ -840,47 +803,6 @@ export interface ApiConfigConfig extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::config.config',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiPostsAlldayPostsAllday extends Schema.CollectionType {
-  collectionName: 'posts_alldays';
-  info: {
-    singularName: 'posts-allday';
-    pluralName: 'posts-alldays';
-    displayName: 'B\u00E0i vi\u1EBFt allday';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    content: Attribute.RichText;
-    thumbnail: Attribute.Media;
-    link: Attribute.String;
-    isTop: Attribute.Boolean;
-    category: Attribute.Relation<
-      'api::posts-allday.posts-allday',
-      'manyToOne',
-      'api::category.category'
-    >;
-    icon: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::posts-allday.posts-allday',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::posts-allday.posts-allday',
       'oneToOne',
       'admin::user'
     > &
@@ -1004,10 +926,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::allday-coin.allday-coin': ApiAlldayCoinAlldayCoin;
       'api::allday-partner.allday-partner': ApiAlldayPartnerAlldayPartner;
-      'api::category.category': ApiCategoryCategory;
       'api::collection.collection': ApiCollectionCollection;
       'api::config.config': ApiConfigConfig;
-      'api::posts-allday.posts-allday': ApiPostsAlldayPostsAllday;
       'api::wcm-case-studies.wcm-case-studies': ApiWcmCaseStudiesWcmCaseStudies;
       'api::wcm-influencers.wcm-influencers': ApiWcmInfluencersWcmInfluencers;
       'api::wcm-service.wcm-service': ApiWcmServiceWcmService;
