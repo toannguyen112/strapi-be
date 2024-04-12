@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "allday_partners",
+  "info": {
+    "singularName": "allday-partner",
+    "pluralName": "allday-partners",
+    "displayName": "allday_partner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "text"
+    },
+    "link": {
+      "type": "text"
+    }
+  }
+}

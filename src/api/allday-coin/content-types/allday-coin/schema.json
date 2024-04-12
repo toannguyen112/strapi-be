@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "allday_coins",
+  "info": {
+    "singularName": "allday-coin",
+    "pluralName": "allday-coins",
+    "displayName": "allday_coin"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "text"
+    }
+  }
+}
