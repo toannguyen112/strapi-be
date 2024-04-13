@@ -683,6 +683,7 @@ export interface ApiAlldayCoinAlldayCoin extends Schema.CollectionType {
     singularName: 'allday-coin';
     pluralName: 'allday-coins';
     displayName: 'allday_coin';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -690,7 +691,7 @@ export interface ApiAlldayCoinAlldayCoin extends Schema.CollectionType {
   attributes: {
     name: Attribute.String & Attribute.Required;
     link: Attribute.String;
-    icon: Attribute.Text;
+    icon: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

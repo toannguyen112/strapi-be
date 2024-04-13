@@ -4,7 +4,8 @@
   "info": {
     "singularName": "allday-coin",
     "pluralName": "allday-coins",
-    "displayName": "allday_coin"
+    "displayName": "allday_coin",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,7 +20,14 @@
       "type": "string"
     },
     "icon": {
-      "type": "text"
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
