@@ -851,6 +851,7 @@ export interface ApiWcmInfluencersWcmInfluencers extends Schema.CollectionType {
     singularName: 'wcm-influencers';
     pluralName: 'wcm-influencer';
     displayName: 'wcm_influencer';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -859,6 +860,7 @@ export interface ApiWcmInfluencersWcmInfluencers extends Schema.CollectionType {
     name: Attribute.String;
     link: Attribute.String;
     thumbnail: Attribute.Media;
+    description: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "wcm-influencers",
     "pluralName": "wcm-influencer",
-    "displayName": "wcm_influencer"
+    "displayName": "wcm_influencer",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,14 +19,18 @@
       "type": "string"
     },
     "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "description": {
+      "type": "string"
     }
   }
 }
