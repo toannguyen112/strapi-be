@@ -692,6 +692,7 @@ export interface ApiAlldayCoinAlldayCoin extends Schema.CollectionType {
     name: Attribute.String & Attribute.Required;
     link: Attribute.String;
     icon: Attribute.Media;
+    description: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
