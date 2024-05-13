@@ -717,14 +717,15 @@ export interface ApiAlldayPartnerAlldayPartner extends Schema.CollectionType {
     singularName: 'allday-partner';
     pluralName: 'allday-partners';
     displayName: 'allday_partner';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
-    icon: Attribute.Text;
     link: Attribute.Text;
+    thumbnail: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
