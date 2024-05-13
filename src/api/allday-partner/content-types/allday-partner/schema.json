@@ -4,7 +4,8 @@
   "info": {
     "singularName": "allday-partner",
     "pluralName": "allday-partners",
-    "displayName": "allday_partner"
+    "displayName": "allday_partner",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,11 +16,18 @@
       "type": "string",
       "required": true
     },
-    "icon": {
-      "type": "text"
-    },
     "link": {
       "type": "text"
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
