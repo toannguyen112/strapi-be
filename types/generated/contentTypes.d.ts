@@ -744,6 +744,38 @@ export interface ApiAlldayPartnerAlldayPartner extends Schema.CollectionType {
   };
 }
 
+export interface ApiAz9VideosAz9Videos extends Schema.CollectionType {
+  collectionName: 'az9_video';
+  info: {
+    singularName: 'az9-videos';
+    pluralName: 'az9-video';
+    displayName: 'az9_video';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    thumbnail: Attribute.Media;
+    link_youtube: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::az9-videos.az9-videos',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::az9-videos.az9-videos',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCollectionCollection extends Schema.CollectionType {
   collectionName: 'collections';
   info: {
@@ -931,6 +963,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::allday-coin.allday-coin': ApiAlldayCoinAlldayCoin;
       'api::allday-partner.allday-partner': ApiAlldayPartnerAlldayPartner;
+      'api::az9-videos.az9-videos': ApiAz9VideosAz9Videos;
       'api::collection.collection': ApiCollectionCollection;
       'api::config.config': ApiConfigConfig;
       'api::wcm-case-studies.wcm-case-studies': ApiWcmCaseStudiesWcmCaseStudies;

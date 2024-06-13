@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "az9_video",
+  "info": {
+    "singularName": "az9-videos",
+    "pluralName": "az9-video",
+    "displayName": "az9_video"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "link_youtube": {
+      "type": "string"
+    }
+  }
+}
