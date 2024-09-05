@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wcm_porfolios",
+  "info": {
+    "singularName": "wcm-porfolio",
+    "pluralName": "wcm-porfolios",
+    "displayName": "Wcm_porfolio"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "link_mail": {
+      "type": "string"
+    },
+    "link_discord": {
+      "type": "string"
+    },
+    "link_twitter": {
+      "type": "string"
+    },
+    "link_website": {
+      "type": "string"
+    },
+    "link_tele": {
+      "type": "string"
+    }
+  }
+}

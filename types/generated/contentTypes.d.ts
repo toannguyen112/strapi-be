@@ -912,6 +912,43 @@ export interface ApiWcmInfluencersWcmInfluencers extends Schema.CollectionType {
   };
 }
 
+export interface ApiWcmPorfolioWcmPorfolio extends Schema.CollectionType {
+  collectionName: 'wcm_porfolios';
+  info: {
+    singularName: 'wcm-porfolio';
+    pluralName: 'wcm-porfolios';
+    displayName: 'Wcm_porfolio';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    icon: Attribute.Text;
+    description: Attribute.Text;
+    link_mail: Attribute.String;
+    link_discord: Attribute.String;
+    link_twitter: Attribute.String;
+    link_website: Attribute.String;
+    link_tele: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::wcm-porfolio.wcm-porfolio',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::wcm-porfolio.wcm-porfolio',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiWcmServiceWcmService extends Schema.CollectionType {
   collectionName: 'wcm_services';
   info: {
@@ -968,6 +1005,7 @@ declare module '@strapi/types' {
       'api::config.config': ApiConfigConfig;
       'api::wcm-case-studies.wcm-case-studies': ApiWcmCaseStudiesWcmCaseStudies;
       'api::wcm-influencers.wcm-influencers': ApiWcmInfluencersWcmInfluencers;
+      'api::wcm-porfolio.wcm-porfolio': ApiWcmPorfolioWcmPorfolio;
       'api::wcm-service.wcm-service': ApiWcmServiceWcmService;
     }
   }
