@@ -4,7 +4,8 @@
   "info": {
     "singularName": "wcm-porfolio",
     "pluralName": "wcm-porfolios",
-    "displayName": "Wcm_porfolio"
+    "displayName": "Wcm_porfolio",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -34,6 +35,9 @@
     },
     "link_tele": {
       "type": "string"
+    },
+    "phone": {
+      "type": "biginteger"
     }
   }
 }

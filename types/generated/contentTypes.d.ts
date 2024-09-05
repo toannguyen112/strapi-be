@@ -918,6 +918,7 @@ export interface ApiWcmPorfolioWcmPorfolio extends Schema.CollectionType {
     singularName: 'wcm-porfolio';
     pluralName: 'wcm-porfolios';
     displayName: 'Wcm_porfolio';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -931,6 +932,7 @@ export interface ApiWcmPorfolioWcmPorfolio extends Schema.CollectionType {
     link_twitter: Attribute.String;
     link_website: Attribute.String;
     link_tele: Attribute.String;
+    phone: Attribute.BigInteger;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
